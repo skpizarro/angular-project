@@ -21,4 +21,10 @@ export class ListaDestinosComponent implements OnInit {
     return false; // para que no recargue toda la pagina
   }
 
+  elegido(d:DestinoViaje){
+    this.destinos.forEach(function(x){x.setSelected(false)}) // Desmarcamos como elegidos a todos los demas
+    d.setSelected(true); // Marcamos el que emitio el evento, o el que corresponde al parametro recibido
+
+  }
+
 }
